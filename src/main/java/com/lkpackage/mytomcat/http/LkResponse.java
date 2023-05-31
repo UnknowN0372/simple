@@ -8,6 +8,7 @@ import java.net.Socket;
  * @author UnknownCode
  * @version 1.0
  * @date 2023/5/30 23:09
+ * 处理橙装httpResponse
  */
 public class LkResponse {
     private Socket socket = null;

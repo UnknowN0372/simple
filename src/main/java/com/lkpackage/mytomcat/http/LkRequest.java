@@ -8,6 +8,7 @@ import java.util.HashMap;
  * @author UnknownCode
  * @version 1.0
  * @date 2023/5/30 23:09
+ * 处理封装httpRequest
  */
 public class LkRequest {
     private String method = ""; // 请求方法
@@ -38,9 +39,10 @@ public class LkRequest {
             // 判断uris是否有? 或者 &
             int index = 0;
             if ((index = uris.indexOf("?")) == -1){
-                // 说明没有?,直接复制
+                // 说明没有?,直接赋值
                 uri = uris;
             }else{
+                uri = uris.substring(0,index);
                 // 判断是否有参数
                 String params = uris.substring(index+1);
                 String[] param = params.split("&");
